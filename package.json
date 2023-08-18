@@ -1,0 +1,34 @@
+{
+  "name": "monaco-editor-react-repackaged",
+  "version": "1.0.0",
+  "description": "ES2015 repackaging of @typefox/monaco-editor-react",
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@typefox/monaco-editor-react": "^1.1.1",
+    "esbuild": "^0.19.2",
+    "esbuild-wasm": "^0.19.2",
+    "install-peers": "^1.0.4",
+    "monaco-editor": "^0.39.0",
+    "monaco-languageclient": "~6.2.0",
+    "vscode": "npm:@codingame/monaco-vscode-api@1.79.3",
+    "vscode-jsonrpc": "~8.1.0",
+    "vscode-languageclient": "~8.1.0",
+    "vscode-ws-jsonrpc": "~3.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "buffer": "^6.0.3"
+  },
+  "type": "module",
+  "main": "./out/index.js",
+  "dependencies": {
+  },
+  "scripts": {
+    "build": "esbuild --target=es2015 --bundle --splitting --format=esm --outdir=out ./node_modules/@typefox/monaco-editor-react/dist/index.js --loader:.mp3=file --loader:.ttf=file --loader:.wasm=file --external:react --external:react-dom "
+  },
+  "files": [
+    "out",
+    "index.d.ts"
+  ]
+}

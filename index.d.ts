@@ -1,0 +1,1 @@
+declare module 'lotse-monaco-editor-react-repackaged';
